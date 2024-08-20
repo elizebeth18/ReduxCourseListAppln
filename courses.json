@@ -9,7 +9,8 @@
       "link_id": "1321548",
       "link_name": "C in Depth: The Complete C Programming Guide for Beginners",
       "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1321548&type=2&subid=0",
-      "retail_price": 195
+      "retail_price": 195,
+      "id": "155f"
     },
     {
       "advertiser": "Udemy",
@@ -20,7 +21,8 @@
       "link_id": "111712",
       "link_name": "C Programming For Beginners",
       "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0",
-      "retail_price": 145
+      "retail_price": 145,
+      "id": "2403"
     },
     {
       "advertiser": "Udemy",
@@ -31,7 +33,8 @@
       "link_id": "771448",
       "link_name": "Learn and Master C Programming For Absolute Beginners!",
       "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.771448&type=2&subid=0",
-      "retail_price": 200
+      "retail_price": 200,
+      "id": "238f"
     },
     {
       "advertiser": "Udemy",
@@ -42,7 +45,8 @@
       "link_id": "512470",
       "link_name": "C Programming - Complete Tutorial For Beginners",
       "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.512470&type=2&subid=0",
-      "retail_price": 95
+      "retail_price": 95,
+      "id": "76c5"
     },
     {
       "advertiser": "Udemy",
@@ -53,128 +57,18 @@
       "link_id": "1037214",
       "link_name": "C Programming For Beginners",
       "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1037214&type=2&subid=0",
-      "retail_price": 20
+      "retail_price": 20,
+      "id": "1599"
     }
   ],
   "enquiry": [
     {
-      "id": "5a3c",
-      "name": "jilu",
-      "phoneNumber": "7412589632",
-      "email": "w@gmail.com",
-      "enquiryMessage": "what is the course all about?",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "7100",
-      "name": "job",
-      "phoneNumber": "1236547895",
-      "email": "job@gmail.com",
-      "enquiryMessage": "denn dde\ncm m",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "5fa6",
-      "name": "bvnf",
-      "phoneNumber": "",
-      "email": "",
-      "enquiryMessage": "fnrjn",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "0238",
-      "name": "efe",
-      "phoneNumber": "5465231239894",
-      "email": "h@j.com",
-      "enquiryMessage": "dew",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "4bd3",
-      "name": "ddsd",
-      "phoneNumber": "2132156664",
-      "email": "ww@g.com",
-      "enquiryMessage": "cdsc",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "0eb2",
-      "name": "",
-      "phoneNumber": "",
-      "email": "",
-      "enquiryMessage": "",
-      "errors": {
-        "name": "",
-        "email": "",
-        "phoneNumber": ""
-      }
-    },
-    {
-      "id": "d4ac",
-      "name": "dasappan",
-      "phoneNumber": "46561237892",
-      "email": "das@gmail.com",
-      "enquiryMessage": "what is C programming?",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "c08d",
-      "name": "nm",
-      "phoneNumber": "1478523692",
-      "email": "",
-      "enquiryMessage": "is it c programming",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "5269",
-      "name": "yiy",
-      "phoneNumber": "1478523692",
-      "email": "cdksl@vfmdklf.com",
-      "enquiryMessage": "dcd dsk\n\ncdk",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "9e1f",
-      "name": "hkj",
-      "phoneNumber": "464942312123",
-      "email": "",
-      "enquiryMessage": "nmbji",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "0dce",
-      "name": "dswd",
-      "phoneNumber": "5823691230",
-      "email": "",
-      "enquiryMessage": "ddd\ndscvf\n           dgbgbgd",
-      "errors": {
-        "enquiryMessage": ""
-      }
-    },
-    {
-      "id": "7bf2",
-      "name": "qaz",
-      "phoneNumber": "",
-      "email": "qaz@qaz.com",
-      "enquiryMessage": "what is the best course to study?",
+      "id": "2dae",
+      "name": "Dasappan",
+      "phoneNumber": "7412589630",
+      "email": "jilu_das18@yahoo.co.in",
+      "enquiryMessage": "what is C",
+      "courseName": "Learn and Master C Programming For Absolute Beginners!",
       "errors": {
         "enquiryMessage": ""
       }

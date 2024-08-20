@@ -12,6 +12,7 @@ const DisplayEnquiry = (props) => {
                     <td>{item.name}</td>
                     <td>{item.email}</td>
                     <td>{item.phoneNumber}</td>
+                    <td>{item.courseName}</td>
                     <td>{item.enquiryMessage}</td>
                 </tr>);
             })
@@ -25,6 +26,7 @@ const DisplayEnquiry = (props) => {
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone Number</th>
+                    <th>Course Name</th>
                     <th>Enquiry</th>
                 </thead>
                 <tbody>

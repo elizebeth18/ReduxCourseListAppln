@@ -1,17 +1,20 @@
 import React,{useState} from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useSearchParams } from 'react-router-dom';
 
 const url = "http://localhost:9112/enquiry";
 
 const EnquiryForm = () => {
 
     const navigate = useNavigate();
+    const [searchParams, setSearchParams]  = useSearchParams();
+
     const [inquiryObj, setInquiryObj] = useState({
         name: "",
         phoneNumber: "",
         email: "",
         enquiryMessage: "",
+        courseName: "",
         errors: {
           name: "",
           email: "",
@@ -36,6 +39,8 @@ const EnquiryForm = () => {
 
         event.preventDefault();
 
+        inquiryObj.courseName = searchParams.get('courseName');
+
         if(inquiryObj.name !=="" && 
             (inquiryObj.email !== "" || inquiryObj.phoneNumber !== "") && 
             inquiryObj.enquiryMessage!== "") {
@@ -51,6 +56,7 @@ const EnquiryForm = () => {
                     name: "",
                     phoneNumber: "",
                     email: "",
+                    courseName: "",
                     enquiryMessage: "",
                     errors: {
                         name: "",
@@ -148,6 +154,12 @@ const EnquiryForm = () => {
                                             placeholder="Email"
                                             onChange={handleInquiry} />
                                         <span className="text-danger">{inquiryObj.errors.email}</span>
+                                    </div>
+                                    <div className="form-group">
+                                        <label>Course Name</label>
+                                        <input type="text" className="form-control" 
+                                            name="name" value={searchParams.get('courseName')} placeholder="Name"
+                                            readOnly />
                                     </div>
                                     <div className="form-group">
                                         <label>Leave Your Message</label>

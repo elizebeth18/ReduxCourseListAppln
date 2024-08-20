@@ -1,24 +1,22 @@
 import React,{useState,useEffect} from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchCourseList } from '../../store/courseListSlice';
 
 const ListCourses = () => {
 
     const [courses,setCourses] = useState([]);
     const navigate = useNavigate();
+    const courseList =  useSelector((state) => state.courseList.listOfCourses);
+    const dispatch =  useDispatch();
+    
 
     useEffect(()=>{
+        setCourses(courseList);
+    },[courseList]);
 
-        console.log("useEffect");
-        axios.get('http://localhost:9112/learn-c.org')
-        .then((response) => {
-            //console.log(response.data);
-            setCourses(response.data);
-
-        }).catch((err) => {
-            console.error(err)
-        });
-
+    useEffect(()=>{
+        dispatch(fetchCourseList());
     },[]);
 
     const displayCourses = (cData) => {
@@ -33,7 +31,7 @@ const ListCourses = () => {
                     </div>
                     <center>
                         <button className='btn btn-primary'
-                            onClick={() => {navigate('enquiryForm',{ replace: true })}}>
+                            onClick={() => {navigate('enquiryForm?courseName='+item.link_name,{ replace: true })}}>
                                 Enquiry
                         </button>
                     </center>
