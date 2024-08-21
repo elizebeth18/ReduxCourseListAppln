@@ -1,13 +1,13 @@
 import React,{useState} from 'react';
-import axios from 'axios';
-import { useNavigate,useSearchParams } from 'react-router-dom';
-
-const url = "http://localhost:9112/enquiry";
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { postEnquiryForm } from '../../store/enquiryFormSlice';
 
 const EnquiryForm = () => {
 
     const navigate = useNavigate();
-    const [searchParams, setSearchParams]  = useSearchParams();
+    const [searchParams]  = useSearchParams();
+    const dispatch = useDispatch();
 
     const [inquiryObj, setInquiryObj] = useState({
         name: "",
@@ -45,30 +45,35 @@ const EnquiryForm = () => {
             (inquiryObj.email !== "" || inquiryObj.phoneNumber !== "") && 
             inquiryObj.enquiryMessage!== "") {
 
-            axios.post(url,JSON.stringify(inquiryObj),{
+            /* axios.post(url,JSON.stringify(inquiryObj),{
                 headers: {
                     'accept': 'application/json',
                     'Content-Type': 'application/json'
                 }
             }).then((res) => {
                 console.log(res.status);
-                setInquiryObj({
-                    name: "",
-                    phoneNumber: "",
-                    email: "",
-                    courseName: "",
-                    enquiryMessage: "",
-                    errors: {
-                        name: "",
-                        email: "",
-                        phoneNumber: ""
-                    }
-                });
-                navigate("/viewEnquires", { replace: true });
 
             }).catch((err) => {
                 console.error(err);
+            }); */
+
+            dispatch(postEnquiryForm(inquiryObj));
+
+            setInquiryObj({
+                name: "",
+                phoneNumber: "",
+                email: "",
+                courseName: "",
+                enquiryMessage: "",
+                errors: {
+                    name: "",
+                    email: "",
+                    phoneNumber: ""
+                }
             });
+
+            navigate("/viewEnquires", { replace: true });
+
         }else {
             return;
         }
@@ -126,7 +131,7 @@ const EnquiryForm = () => {
         <div className="container">
                 <div className="panel panel-primary">
                     <div className="panel-heading">
-                        <h3>Course Enquiry Form</h3>
+                        <h3>Enquiry Form for Course - {searchParams.get('courseName')}</h3>
                     </div>
                     <div className="panel-body">
                         <div className="row">
@@ -154,12 +159,6 @@ const EnquiryForm = () => {
                                             placeholder="Email"
                                             onChange={handleInquiry} />
                                         <span className="text-danger">{inquiryObj.errors.email}</span>
-                                    </div>
-                                    <div className="form-group">
-                                        <label>Course Name</label>
-                                        <input type="text" className="form-control" 
-                                            name="name" value={searchParams.get('courseName')} placeholder="Name"
-                                            readOnly />
                                     </div>
                                     <div className="form-group">
                                         <label>Leave Your Message</label>
