@@ -15,6 +15,7 @@ export const fetchCourseList = createAsyncThunk('courseList/fetch', async() => {
 const courseListSlice = createSlice({
     name: 'courseList',
     initialState,
+    reducers:{},
     extraReducers: (builder) => {
         builder.addCase(fetchCourseList.pending, state => {
             state.isLoading = true;

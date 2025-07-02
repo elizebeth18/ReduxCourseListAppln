@@ -19,6 +19,7 @@ export const postEnquiryForm = createAsyncThunk('enquiry/post', async (data) => 
 const enquirySlice = createSlice({
     name: 'enquiryForm',
     initialState,
+    reducers:{},
     extraReducers: (builder) => {
         builder
             .addCase(postEnquiryForm.pending, state => {

@@ -15,6 +15,7 @@ export const fetchEnquiresList = createAsyncThunk('viewEnquiresList/get', async(
 const viewEnquires = createSlice({
     name: 'viewEnquires',
     initialState,
+    reducers:{},
     extraReducers: (builder) => {
         builder
         .addCase(fetchEnquiresList.pending, state => {
