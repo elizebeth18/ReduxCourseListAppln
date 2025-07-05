@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { postEnquiryForm } from '../../store/enquiryFormSlice';
+import { postEnquiryForm } from '../../store/enquiryFormSlice.js';
 
 const EnquiryForm = () => {
 

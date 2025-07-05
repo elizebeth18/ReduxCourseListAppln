@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import ListCourses from '../ListCourses/ListCourses';
+import ListCourses from '../ListCourses/ListCourses.js';
 
 const Home = () => {
 

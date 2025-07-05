@@ -8,7 +8,7 @@ const initialState = {
 }
 
 export const fetchCourseList = createAsyncThunk('courseList/fetch', async() => {
-    const response = await axios.get('http://localhost:9112/learn-c.org')
+    const response = await axios.get('http://localhost:9112/courses')
     return response.data;
 });
 
@@ -31,5 +31,6 @@ const courseListSlice = createSlice({
     }
 });
 
+export const selectCourseList = state => state.courseList.listOfCourses;
 export default courseListSlice.reducer;
 

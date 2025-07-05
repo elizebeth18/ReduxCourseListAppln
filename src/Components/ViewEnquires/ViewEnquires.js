@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import DisplayEnquiry from './DisplayEnquiry';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchEnquiresList } from '../../store/viewEnquiresSlice';
+import { fetchEnquiresList } from '../../store/viewEnquiresSlice.js';
 
 
 const ViewEnquires = () => {

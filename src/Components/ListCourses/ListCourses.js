@@ -1,13 +1,13 @@
-import React,{useState,useEffect} from 'react';
+import {useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchCourseList } from '../../store/courseListSlice';
+import { fetchCourseList,selectCourseList } from '../../store/courseListSlice.js';
 
 const ListCourses = () => {
 
     const [courses,setCourses] = useState([]);
     const navigate = useNavigate();
-    const courseList =  useSelector((state) => state.courseList.listOfCourses);
+    const courseList =  useSelector(selectCourseList);
     const dispatch =  useDispatch();
     
 
@@ -22,16 +22,16 @@ const ListCourses = () => {
     const displayCourses = (cData) => {
         if(cData){
             return cData.map((item) => {
-                return (<div className='col-md-5 courseDiv'  key={item.id}>
+                return (<div className='col-md-5 courseDiv'  key={Math.random(1)}>
                     <div className='col-md-12'>
-                        <img src={item.image_url} alt={item.link_name} style={{width: '100%'}}/>
+                        <img src={item.img} alt={item.name} style={{width: '100%'}}/>
                     </div>
                     <div className='col-md-12 text-center' style={{margin: 10}}>
-                        <span>{item.link_name}</span>
+                        <span>{item.details}</span>
                     </div>
                     <center>
                         <button className='btn btn-primary'
-                            onClick={() => {navigate('enquiryForm?courseName='+item.link_name,{ replace: true })}}>
+                            onClick={() => {navigate('enquiryForm?courseName='+item.name,{ replace: true })}}>
                                 Enquiry
                         </button>
                     </center>
